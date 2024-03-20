@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  backend:
+    image: ${DOCKER_REGISTRY-}currencyexchanger
+    build:
+      context: .
+      dockerfile: CurrencyExchanger/Dockerfile
+  frontend:
+   image: nginx
+   volumes:
+      - ./frontend/index.html:/usr/share/nginx/html/index.html
+      - ./frontend/css:/usr/share/nginx/html/css
+      - ./frontend/js:/usr/share/nginx/html/js

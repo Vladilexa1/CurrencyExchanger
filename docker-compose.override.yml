@@ -1,0 +1,9 @@
+﻿version: '3.4'
+
+services:
+  backend:
+    ports:
+      - "52221:8080"
+  frontend:
+   ports: 
+   - "52223:80"

@@ -1,0 +1,220 @@
+﻿@CurrencyExchanger_HostAddress = http://localhost:5229
+
+GET {{CurrencyExchanger_HostAddress}}/currencies/
+Accept: application/json
+
+###
+GET {{CurrencyExchanger_HostAddress}}/currencies/AUD
+Accept: application/json
+
+###
+GET {{CurrencyExchanger_HostAddress}}/currencies/USD
+Accept: application/json
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "United States dollar",
+   "code": "USD",
+   "sign": "$"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "Australian Dollar",
+   "code": "AUD",
+   "sign": "$"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "Bulgarian Lev",
+   "code": "BGN",
+   "sign": "LV"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "Yuan Renminbi",
+   "code": "CNY",
+   "sign": "¥"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "Czech Koruna",
+   "code": "CZK",
+   "sign": "Kč"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/x-www-form-urlencoded
+
+{
+   "code": "QQQ",
+   "name": "Jacob",
+   "sign": "!"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/x-www-form-urlencoded
+
+name=Jacob&code=QQQ&sign=!
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "name": "Euro",
+   "code": "EUR",
+   "sign": "€"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "Pound Sterling",
+   "code": "GBP",
+   "sign": "£"
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/currencies/
+Content-Type: application/json
+
+{
+   "fullname": "Hryvnia",
+   "code": "UAH",
+   "sign": "₴"
+}
+
+###
+DELETE {{CurrencyExchanger_HostAddress}}/currencies/5
+Accept: aplication/json
+
+
+###
+GET {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Accept: application/json
+
+###
+POST {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Content-Type: application/json
+
+{
+   "currensyPair": "USDBGN",
+   "rate": 1.82
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Content-Type: application/json
+
+{
+   "currensyPair": "USDCNY",
+   "rate": 7.1982
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Content-Type: application/json
+
+{
+   "currensyPair": "USDCZK",
+   "rate": 23.6734
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Content-Type: application/json
+
+{
+   "currensyPair": "USDEUR",
+   "rate": 0.9288
+}
+
+###
+POST {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Content-Type: application/json
+
+{
+   "baseCurrency": "USS",
+   "targetCurrensy": "ISS",
+   "rate": 0.7946
+}
+
+###
+GET {{CurrencyExchanger_HostAddress}}/exchangeRates/
+Accept: application/json
+
+###
+DELETE {{CurrencyExchanger_HostAddress}}/exchangeRates/3
+Accept: aplication/json
+
+###
+DELETE {{CurrencyExchanger_HostAddress}}/currencies/15
+Accept: aplication/json
+
+###
+GET {{CurrencyExchanger_HostAddress}}/exchange?from=UAH&to=AUD&amount=10
+Accept: application/json
+
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDUAH
+Content-Type: application/x-www-form-urlencoded
+
+rate=38.70
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDAUD
+Content-Type: application/x-www-form-urlencoded
+
+rate=1.5096
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDBGN
+Content-Type: application/x-www-form-urlencoded
+
+rate=1.7878
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDCNY
+Content-Type: application/x-www-form-urlencoded
+
+rate=7.1891
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDCZK
+Content-Type: application/x-www-form-urlencoded
+
+rate=23.0317
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDGBP
+Content-Type: application/x-www-form-urlencoded
+
+rate=0.7851
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/EURCNY
+Content-Type: application/x-www-form-urlencoded
+
+rate=7.8556
+###
+PATCH {{CurrencyExchanger_HostAddress}}/exchangeRates/USDEUR
+Content-Type: application/x-www-form-urlencoded
+
+rate=0.9153
+###
