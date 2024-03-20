@@ -3,7 +3,7 @@ Created according to the technical specifications presented in [this course](htt
 ## Overview
 REST API for describing currencies and exchange rates. Allows you to view and edit lists of currencies and exchange rates, and calculate the conversion of arbitrary amounts from one currency to another.
 ## API Reference
-GET /currencies
+**GET /currencies**
   ```[
     {
         "id": 0,
@@ -17,4 +17,15 @@ GET /currencies
         "code": "EUR",
         "sign": "€"
     }
-  ]```
+  ]
+```
+**HTTP response codes:**
+```Success - 200
+Error (the database is not available) - 500```
+**GET /currency/${CURRENCY_CODE}**
+```{
+    "id": 0,
+    "name": "Euro",
+    "code": "EUR",
+    "sign": "€"
+}```
