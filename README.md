@@ -42,6 +42,7 @@ Error (for example, the database is not available) - 500
 |Parameter|Type|Description|
 |---------|----|-----------|
 |`CURRENCY_CODE`|`string`|**Required**. of item to fetch|
+
 **POST /currencies**
 ```
 {
