@@ -21,11 +21,22 @@ REST API for describing currencies and exchange rates. Allows you to view and ed
 ```
 **HTTP response codes:**
 ```Success - 200
-Error (the database is not available) - 500```
+Error (the database is not available) - 500
+```
 **GET /currency/${CURRENCY_CODE}**
 ```{
     "id": 0,
     "name": "Euro",
     "code": "EUR",
     "sign": "€"
-}```
+}
+```
+**HTTP response codes:**
+```Success - 200
+The currency code is not in the address - 400
+Currency not found - 404
+Error (for example, the database is not available) - 500
+```
+|Parameter|Type|Description|
+|---------|----|-----------|
+|`CURRENCY_CODE`|`string`|**Required**. of item to fetch|
