@@ -26,7 +26,8 @@ Success - 200
 Error (the database is not available) - 500
 ```
 **GET /currency/${CURRENCY_CODE}**
-```{
+```
+{
     "id": 0,
     "name": "Euro",
     "code": "EUR",
